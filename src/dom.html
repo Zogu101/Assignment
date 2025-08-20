@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+
+    <section class="flex flex-col justify-center items-center font-[sans-serif] gap-5 mt-7">
+        <h1 class="text-4xl font-bold">Click the Button!</h1>
+        <p id="number" class="text-blue-500 text-3xl font-bold">0</p>
+        <div>
+        <button onclick="increasecount()" class="border-2 bg-blue-100 p-5 hover:bg-blue-300 ">+</button>
+        <button onclick="decreasecount()" class="border-2 bg-blue-100 p-5 hover:bg-blue-300 ">-</button>
+        <button onclick="resetcount()" class="border-2 bg-blue-100 p-5 hover:bg-blue-300 ">Reset</button>
+        <button id="auto"  class="border-2 bg-blue-100 p-5 hover:bg-blue-300 ">Auto</button>
+        <button id="stopcount"  class="border-2 bg-blue-100 p-5 hover:bg-blue-300 ">stop</button>
+        <div>
+        <button id="timeout"  class="border-2 bg-blue-100 p-5 hover:bg-blue-300 ">Timeout</button> <input class="border-2 border-b-gray-700" id="timecount" max="10" min="0" value="0" type="number">
+        </div>
+        </div>
+    </section>
+
+    <script>
+        const para = document.getElementById("number");
+        const but = document.getElementById("auto");
+        const stop = document.getElementById("stopcount");
+        
+        const tcount = document.getElementById("timecount");
+
+        let count = 0,
+        clear;
+
+        function increasecount(){
+            if (count <= 19 ){
+                count ++;
+                document.getElementById("number").innerHTML = count;
+            }
+        }
+
+        function decreasecount(){
+            if (count > 0  ){
+                count --;
+                document.getElementById("number").innerHTML = count;
+            }
+        }
+
+        function resetcount(){
+            count = 0 ;
+            document.getElementById("number").innerHTML = count;
+            
+        }
+
+        function autocount(){
+            clear = setInterval(function() {
+                count ++,
+                para.innerHTML = count;
+            }, 1000);
+        }
+
+        document.getelementByID("timeout").oncllck.addeventlistener("click", (){
+            if (tcount > 0),
+            count = time 
+            clearInterval(function(){
+                const time = 1000 * time
+
+            }, time )
+        });
+
+
+    
+    but.addEventListener("click", autocount);
+    stop.addEventListener("click", scount);
+    
+
+
+    </script>
+</body>
+</html>
