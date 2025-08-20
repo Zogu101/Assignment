@@ -28,3 +28,15 @@ section button{
     padding-inline: 2rem;
     padding-block: 0.5rem;
 }
+
+section div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+section div div{
+    display: flex;
+    flex-direction: column;
+}
